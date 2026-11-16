@@ -1,0 +1,434 @@
+/* ==========================================================
+   CONEXÃO AGUA - Folha de Estilos Externa (Mobile First)
+   ========================================================== */
+
+:root {
+  --cor-primaria: #0077b6;
+  --cor-primaria-escura: #023e8a;
+  --cor-ods6: #26bde2;
+  --cor-secundaria: #e6f4f9;
+  --cor-acento: #0096c7;
+  --cor-fundo: #f4f9fc;
+  --cor-texto: #142838;
+  --cor-texto-suave: #4a6578;
+  --cor-branco: #ffffff;
+  --cor-erro: #c0392b;
+  --sombra-card: 0 6px 20px rgba(2, 62, 138, 0.08);
+  --raio: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* Cabeçalho e Navegação */
+.topo {
+  background-color: var(--cor-branco);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  padding: 0.8rem 0;
+}
+
+.logo-topo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--cor-primaria-escura);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-topo i {
+  color: var(--cor-ods6);
+}
+
+.nav-link {
+  color: var(--cor-texto);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.ativo {
+  color: var(--cor-primaria-escura);
+  background-color: var(--cor-secundaria);
+  font-weight: 600;
+}
+
+/* Seção Hero (Base Mobile: < 768px) */
+.hero {
+  background: linear-gradient(135deg, var(--cor-primaria-escura) 0%, var(--cor-primaria) 100%);
+  color: var(--cor-branco);
+  padding: 3.25rem 1rem;
+}
+
+.hero-interno {
+  padding: 2.5rem 1rem;
+}
+
+.hero-conteudo {
+  max-width: 760px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #90e0ef;
+  margin-bottom: 0.5rem;
+}
+
+.secao .eyebrow,
+.destaque .eyebrow {
+  color: var(--cor-primaria);
+}
+
+.hero h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  opacity: 0.94;
+  margin-bottom: 1.75rem;
+}
+
+.hero-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Botões */
+.btn-principal {
+  background-color: var(--cor-ods6);
+  color: #032539;
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-principal:hover {
+  background-color: var(--cor-ods6);
+  color: #032539;
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+.btn-secundario {
+  background-color: rgba(255, 255, 255, 0.14);
+  color: var(--cor-branco);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-secundario:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-primaria-escura);
+}
+
+.btn-claro {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-claro:hover {
+  background-color: var(--cor-primaria-escura);
+  color: var(--cor-branco);
+}
+
+/* Seções e Cards ODS */
+.secao {
+  padding: 3.25rem 1rem;
+}
+
+.secao-cabecalho {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.25rem;
+}
+
+.secao-cabecalho h2 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.card-ods,
+.card-info {
+  background-color: var(--cor-branco);
+  border-radius: var(--raio);
+  padding: 1.75rem;
+  box-shadow: var(--sombra-card);
+  border: 1px solid rgba(0, 119, 182, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.card-ods-principal {
+  border-top: 6px solid var(--cor-ods6);
+}
+
+.ods-selo {
+  align-self: flex-start;
+  background-color: var(--cor-ods6);
+  color: #032539;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+}
+
+.ods-selo.ods-3 {
+  background-color: #4c9f38;
+  color: var(--cor-branco);
+}
+
+.ods-selo.ods-11 {
+  background-color: #fd9d24;
+  color: var(--cor-branco);
+}
+
+.ods-subtitulo {
+  color: var(--cor-primaria);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card-info i {
+  font-size: 1.75rem;
+  color: var(--cor-primaria);
+}
+
+.card-info h3,
+.card-ods h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Seção Destaque */
+.destaque {
+  background-color: var(--cor-secundaria);
+  text-align: center;
+  padding: 3.25rem 1rem;
+}
+
+.destaque h2 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  max-width: 650px;
+  margin: 0 auto 1rem;
+}
+
+.destaque p {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+  color: var(--cor-texto-suave);
+}
+
+/* Painéis de Formulário, Lista CRUD e Registro de Atividades */
+.painel-box {
+  background-color: var(--cor-branco);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-card);
+  border: 1px solid rgba(0, 119, 182, 0.12);
+}
+
+.texto-suave {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+.erro-campo {
+  display: block;
+  color: var(--cor-erro);
+  font-size: 0.82rem;
+  min-height: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.campo-invalido {
+  border-color: var(--cor-erro) !important;
+}
+
+.lista-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-ocorrencia {
+  border: 1px solid #d5e6f0;
+  border-left: 5px solid var(--cor-primaria);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fafdff;
+}
+
+.item-ocorrencia.urgencia-alta {
+  border-left-color: var(--cor-erro);
+}
+
+.item-ocorrencia.urgencia-media {
+  border-left-color: #e67e22;
+}
+
+.logs-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+}
+
+.logs-lista li {
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid #e6f0f5;
+}
+
+.logs-lista li.log-erro {
+  color: var(--cor-erro);
+}
+
+/* Rodapé */
+.footer {
+  background-color: var(--cor-primaria-escura);
+  color: var(--cor-branco);
+  padding: 3rem 1rem 1.5rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer a {
+  display: block;
+  color: #caf0f8;
+  text-decoration: none;
+  margin-bottom: 0.4rem;
+}
+
+.footer a:hover {
+  color: var(--cor-branco);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.25rem;
+  font-size: 0.85rem;
+  color: #90e0ef;
+}
+
+/* Botão Voltar ao Topo */
+.scroll-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+  z-index: 999;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.scroll-top.visivel {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================================================
+   MEDIA QUERY 1: Tablet (>= 768px)
+   ========================================================== */
+@media (min-width: 768px) {
+  .hero {
+    padding: 4.5rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .hero-acoes {
+    flex-direction: row;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================
+   MEDIA QUERY 2: Desktop (>= 1024px)
+   ========================================================== */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 5.5rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .painel-box {
+    padding: 2rem;
+  }
+}
